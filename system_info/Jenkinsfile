@@ -1,0 +1,31 @@
+
+node
+{
+  stage('Check status of important services')
+  {
+    checkForum()
+    checkWebserver()
+    checkDatabase()
+    checkAvailableMemory()
+  }
+}
+
+def checkForum()
+{
+    sh '/home/nodebb/schreibnacht.live/nodebb status'
+}
+
+def checkWebserver()
+{
+    sh 'systemctl status apache2'
+}
+
+def checkDatabase()
+{
+    sh 'systemctl status redis_6379'
+}
+
+def checkAvailableMemory()
+{
+    sh 'free -m'
+}
