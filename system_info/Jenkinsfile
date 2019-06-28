@@ -12,7 +12,7 @@ node
 
 def checkForum()
 {
-    sh '/home/nodebb/schreibnacht.live/nodebb status'
+    sh 'sudo /home/nodebb/schreibnacht.live/nodebb status'
 }
 
 def checkWebserver()
