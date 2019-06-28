@@ -1,0 +1,13 @@
+
+node
+{
+  stage('Restart ENTIRE SERVER')
+  {
+    restartHost()
+  }
+}
+
+def restartHost()
+{
+    sh 'sudo reboot'
+}
