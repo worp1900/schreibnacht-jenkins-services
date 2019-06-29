@@ -1,0 +1,14 @@
+
+node
+{
+  stage('Restart Nodebb forum software')
+  {
+    restartNodebb()
+  }
+}
+
+def restartNodebb()
+{
+    sh 'sudo rm -f /home/nodebb/schreibnacht.live/pidfile'
+    sh 'sudo /home/nodebb/schreibnacht.live/nodebb restart'
+}
