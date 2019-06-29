@@ -1,0 +1,13 @@
+
+node
+{
+  stage('Start Nodebb forum software')
+  {
+    startNodebb()
+  }
+}
+
+def startNodebb()
+{
+    sh 'sudo /home/nodebb/schreibnacht.live/nodebb start'
+}

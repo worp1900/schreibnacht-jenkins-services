@@ -1,0 +1,13 @@
+
+node
+{
+  stage('Stop Nodebb forum software')
+  {
+    stopNodebb()
+  }
+}
+
+def stopNodebb()
+{
+    sh 'sudo /home/nodebb/schreibnacht.live/nodebb stop'
+}
